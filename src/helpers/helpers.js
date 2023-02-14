@@ -8,7 +8,7 @@ function remove(items, item){
   const filteredArray = items.filter(food => food !== item)
   const removedItem = item
   console.log('this is item', item)
-  return [filteredArray, removedItem]
+  return [filteredArray, `this is the removed item: ${removedItem}`]
   }
   else {
     return undefined
@@ -32,3 +32,8 @@ console.log(remove([
   "🍅",
   "🥑",
 ], "🍋"))
+
+export {
+  choice, 
+  remove
+}
