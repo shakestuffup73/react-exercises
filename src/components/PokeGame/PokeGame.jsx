@@ -18,8 +18,8 @@ const PokeGame = (props) => {
   return ( 
     <>
       <div>
-        <PokeDex pokemon={hand1} exp={exp1}/>
-        <PokeDex pokemon={hand2} exp={exp2}/>
+        <PokeDex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2}/>
+        <PokeDex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1}/>
       </div>
     </>
   );
