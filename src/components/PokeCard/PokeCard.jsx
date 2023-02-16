@@ -1,9 +1,14 @@
 import React from "react";
 import styles from './PokeCard.module.css'
-const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+// 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+
+const POKE_API = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'
 
 const PokeCard = (props) => {
-  let imgSrc = `${POKE_API}${props.id}.png`
+
+  let imgPadding = (number) => (number <= 999 ? `00${number}`.slice(-3) : number);
+  let imgSrc = `${POKE_API}${imgPadding(props.id)}.png`
+
   return ( 
     <>
       <div className={styles.PokeCard}>
