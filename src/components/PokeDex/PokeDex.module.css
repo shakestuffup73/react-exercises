@@ -1,5 +1,18 @@
+.PokeDex {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .PokeDexCards {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.PokeDexWinner {
+  color: green;
+}
+
+.PokeDexLoser {
+  color: red;
 }
