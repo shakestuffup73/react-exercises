@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../helpers/pokemon.js'
+import PokeDex from '../PokeDex/PokeDex'
 
 const PokeGame = (props) => {
 
@@ -10,11 +10,17 @@ const PokeGame = (props) => {
     let randPokemon = hand2.splice(randIdx, 1)[0]
     hand1.push(randPokemon)
   }
-  console.log('this is hand1', hand1, 'this is hand2', hand2)
+  let exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.base_experience, 0)
+  let exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.base_experience, 0)
+
+  console.log('this is props:', props)
   
   return ( 
     <>
-      <div>PokeGame!</div>
+      <div>
+        <PokeDex pokemon={hand1} exp={exp1}/>
+        <PokeDex pokemon={hand2} exp={exp2}/>
+      </div>
     </>
   );
 }
