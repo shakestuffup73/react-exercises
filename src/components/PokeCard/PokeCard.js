@@ -7,10 +7,10 @@ const PokeCard = (props) => {
   return ( 
     <>
       <div className={styles.PokeCard}>
-        <h1>{props.name}</h1>
-        <h2>{props.type}</h2>
-        <h3>{props.exp}</h3>
+        <h1 className={styles.PokeCardTitle}>{props.name}</h1>
         <img src={imgSrc} alt='pokemon' />
+        <div className={styles.PokeCardData}>Type: {props.type}</div>
+        <div className={styles.PokeCardData}>EXP: {props.exp}</div>
       </div>
     </>
   );
